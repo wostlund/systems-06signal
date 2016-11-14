@@ -15,7 +15,7 @@ static void sighandler(int signo) {
     int a = open("file.txt", O_RDWR | O_APPEND, 0666);
     write(a, "Exited due to SIGINT\n", sizeof("Exited due to SIGINT\n"));
     close(a);
-    exit(1);
+    exit(0);
   }
 }
 
